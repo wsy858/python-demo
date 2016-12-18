@@ -8,6 +8,8 @@ Created on 2016年10月12日
 '''
 定义一个person类
 '''
+
+
 class Person(object):
     # 构造方法
     def __init__(self, name, gender, birth, **kw):
