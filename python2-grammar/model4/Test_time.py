@@ -1,21 +1,21 @@
 # -*- coding: UTF-8 -*-
-'''
+"""
 Created on 2016年10月9日
 时间模块
 @author: evan
-'''
+"""
 
 # 引入time模块
 import time
-import calendar
-import functools
 
 # 获取时间戳
-ticks = time.time();
+ticks = time.time()
 print '当前时间戳: ', ticks
+
 # 返回时间元组
 localtime = time.localtime()
 print '当前时间元组：', localtime
+
 # 格式化日期成2016-03-20 11:45:39形式
 print time.strftime('%Y-%m-%d %H:%M:%S', time.localtime())
 # 格式化成Sat Mar 28 22:24:24 2016形式
@@ -26,10 +26,6 @@ a = "Sat Mar 28 22:24:24 2016"
 tuple_time = time.strptime(a, "%a %b %d %H:%M:%S %Y")
 print time.mktime(tuple_time)
 
-# 使用日历
-print calendar.calendar(2016)
-print calendar.month(2016, 11)
-print calendar.isleap(2016)
 
 '''
 python中时间日期格式化符号：

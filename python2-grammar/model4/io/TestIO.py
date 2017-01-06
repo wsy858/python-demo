@@ -1,9 +1,9 @@
-#-*- coding: utf-8 -*-
-'''
+# -*- coding: utf-8 -*-
+"""
 Created on 2016年10月18日
 io
 @author: evan
-'''
+"""
 import os
 
 '''
@@ -40,8 +40,6 @@ f.close()
 print "是否已关闭 : ", f.closed
 print '\n'
 
-
-
 '''
 write()方法
 write()方法可将任何字符串写入一个打开的文件。需要重点注意的是，Python字符串可以是二进制数据，而不是仅仅是文字。
@@ -52,9 +50,8 @@ f.write('hello')
 f.write('world')
 f.writelines('你好')
 f.writelines('中国')
-f.writelines(['22','33'])
+f.writelines(['22', '33'])
 f.close()
-
 
 '''
 read()方法
@@ -69,12 +66,11 @@ print "当前文件位置 : ", f.tell()
 f.seek(0)
 print f.readline()
 
-
 '''
 文件创建、重命名、删除操作
 '''
 try:
-    f = open('ff.txt','w+')
+    f = open('ff.txt', 'w+')
     f.write('bbbbbb')
 except Exception, e:
     print e
@@ -83,31 +79,30 @@ finally:
         f.close()
     except:
         pass
-#删除文件    
+# 删除文件
 try:
     os.remove('b.txt')
-except Exception , e:
+except Exception, e:
     print e
-#重命名文件
-os.rename('ff.txt', 'b.txt')    
+# 重命名文件
+os.rename('ff.txt', 'b.txt')
 
-#清空文件内容
-#f.truncate()
+# 清空文件内容
+# f.truncate()
 
 
 '''
 目录操作
 '''
-#删除目录, 目前里面必须是空的, 否则报错。
+# 删除目录, 目前里面必须是空的, 否则报错。
 os.rmdir("newdir")
-#在当前目录下创建目录
+# 在当前目录下创建目录
 os.mkdir("newdir")
-#更改当前目录
+# 更改当前目录
 os.chdir("newdir")
 os.mkdir("test")
-#显示当前目录
+# 显示当前目录
 print os.getcwd()
-
 
 '''
 文件打开模式
@@ -124,6 +119,3 @@ ab   以二进制格式打开一个文件用于追加。如果该文件已存在
 a+   打开一个文件用于读写。如果该文件已存在，文件指针将会放在文件的结尾。文件打开时会是追加模式。如果该文件不存在，创建新文件用于读写。
 ab+  以二进制格式打开一个文件用于追加。如果该文件已存在，文件指针将会放在文件的结尾。如果该文件不存在，创建新文件用于读写。
 '''
-
-
-

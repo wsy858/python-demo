@@ -1,0 +1,54 @@
+Fri, 23 Dec 2016 10:49:40 TestLogging.py[line:26] WARNING ware-------------
+Fri, 23 Dec 2016 10:49:40 TestLogging.py[line:27] INFO info-------------
+Fri, 23 Dec 2016 10:49:48 TestLogging.py[line:26] WARNING ware-------------
+Fri, 23 Dec 2016 10:49:48 TestLogging.py[line:27] INFO info-------------
+Fri, 23 Dec 2016 10:50:06 TestLogging.py[line:26] WARNING ware-------------
+Fri, 23 Dec 2016 10:50:06 TestLogging.py[line:27] INFO info-------------
+Fri, 23 Dec 2016 10:50:06 TestLogging.py[line:28] DEBUG debug-----------
+Fri, 23 Dec 2016 10:56:58 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 10:56:58 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 10:56:58 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:57:00 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 10:57:00 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 10:57:00 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:57:01 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 10:57:01 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 10:57:01 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 10:57:02 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:57:36 TestLogging.py[line:36] WARNING ware-------------
+Fri, 23 Dec 2016 10:57:36 TestLogging.py[line:37] INFO info-------------
+Fri, 23 Dec 2016 10:57:36 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 10:58:10 TestLogging.py[line:36] WARNING ware-------------
+Fri, 23 Dec 2016 10:58:10 TestLogging.py[line:37] INFO info-------------
+Fri, 23 Dec 2016 10:58:10 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 11:08:36 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 11:08:36 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 11:08:36 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 15:01:24 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 15:01:24 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 15:01:24 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:38] DEBUG debug-----------
+Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:39] DEBUG debug-----------{'name': 'wang'}

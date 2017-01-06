@@ -5,6 +5,7 @@ Created on 2016年12月9日
 @author: evan wang
 """
 
+# windows环境下安装MySQL-python-1.2.3.win-amd64-py2.7.exe
 import MySQLdb
 
 

@@ -28,14 +28,14 @@ tup2 = ('abc', 'xyz')
 # 以下修改元组元素操作是非法的。
 # tup1[0] = 100;
 # 创建一个新的元组
-tup3 = tup1 + tup2;
-print tup3;
+tup3 = tup1 + tup2
+print tup3
 print tup3 * 3
 
 # 元组中的元素值是不允许删除的，但我们可以使用del语句来删除整个元组
 tup = ('physics', 'chemistry', 1997, 2000);
-print tup;
-del tup;
+print tup
+del tup
 print "After deleting tup : "
-print tup;
+print tup
 s = 1, 2
