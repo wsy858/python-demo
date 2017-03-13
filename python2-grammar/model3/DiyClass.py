@@ -23,6 +23,7 @@ class Person(object):
     __repr__ = __str__
 
 
+print '__str__ ***************************'
 p = Person("张三", 28)
 print p
 print '\n'
@@ -49,6 +50,7 @@ class Student(object):
         return cmp(self.score, s.score)
 
 
+print '__cmp__ ***************************'
 L = [Student('Tim', 99), Student('Bob', 88), Student('Alice', 99)]
 print sorted(L)
 print '\n'
@@ -70,16 +72,68 @@ class Fib(object):
         while i < self.num:
             s.append(a)
             a, b = b, a + b
-            i = i + 1
+            i += 1
         return s.__str__()
 
     def __len__(self):
         return self.num
 
+    def __iter__(self):
+        return self
 
+
+print '__len__ ***************************'
 f = Fib(10)
 print f
 print len(f)
+print '\n'
+
+'''
+__iter__  将一个类的实例变成一个可迭代的对象
+'''
+
+
+class Fib2(object):
+    def __init__(self, num):
+        self.a, self.b = 0, 1  # 初始化两个计数器a， b
+        self.num = num
+        self.f = []
+
+    def __iter__(self):
+        return self  # 实例本身就是迭代对象， 故返回自己
+
+    def next(self):
+        self.a, self.b = self.b, self.a + self.b  # 计算下一个值
+        if self.f.__len__() >= self.num:  # 退出循环的条件
+            raise StopIteration()
+        self.f.append(self.a)
+        return self.a  # 返回下一个值
+
+
+print '__iter__ ***************************'
+for n in Fib2(10):
+    print n
+print '\n'
+
+'''
+__call__  将一个类的实例变成一个可调用的对象
+'''
+
+
+class Fib3(object):
+    def __call__(self, n):
+        a, b, L = 0, 1, []
+        for i in range(n):
+            L.append(a)
+            a, b = b, a + b
+        return L
+
+
+print '__call__ ***************************'
+f = Fib3()
+print f(10)
+# 通过callable()函数， 我们就可以判断一个对象是否是“可调用”对象。
+print callable(Fib3())
 print '\n'
 
 '''
@@ -100,6 +154,7 @@ class Rational(object):
         return self.p / self.q
 
 
+print '__int__ ***************************'
 print int(Rational(7, 2))
 print float(Rational(1, 3))
 print '\n'
@@ -136,6 +191,7 @@ class Student2(object):
             return 'C'
 
 
+print 'get set ***************************'
 s = Student2('Bob', 59)
 print s.grade  # 对score赋值实际调用的是 set方法。
 
@@ -149,6 +205,8 @@ print '\n'
 '''
 由于Python是动态语言，任何实例在运行期都可以动态地添加属性。
 __slots__ 是指一个类允许的属性列表, 则添加的属性只能属于这个元组里面的值。
+__slots__定义的属性仅对当前类起作用， 对继承的子类是不起作用的
+除非在子类中也定义__slots__， 这样， 子类允许定义的属性就是自身的__slots__加上父类的__slots__
 '''
 
 
@@ -162,6 +220,7 @@ class Student3(object):
         self.score = score
 
 
+print '__slots__ ***************************'
 s = Student3('李四', 'male', 88)
 s.score = 88
 print s.score
@@ -169,19 +228,19 @@ print s.score
 # print s.grade       
 print '\n'
 
+
 '''
-__call__  将一个类的实例变成一个可调用的对象
+__getattr__ 当调用不存在的属性时， 比如score， Python解释器会试图调用__getattr__(self, 'score')来尝试获得属性
 '''
+class Chain(object):
+    def __init__(self, path=''):
+        self._path = path
 
+    def __getattr__(self, path):
+        return Chain('%s/%s' % (self._path, path))
 
-class Fib2(object):
-    def __call__(self, n):
-        a, b, L = 0, 1, []
-        for i in range(n):
-            L.append(a)
-            a, b = b, a + b
-        return L
+    def __str__(self):
+        return self._path
 
-
-f = Fib2()
-print f(10)
+print '__getattr__ ***************************'
+print Chain('/aaa').status.user.timeline.list.bb

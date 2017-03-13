@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/python-demo.iml" filepath="$PROJECT_DIR$/.idea/python-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/python2-grammar/python2-grammar.iml" filepath="$PROJECT_DIR$/python2-grammar/python2-grammar.iml" />
       <module fileurl="file://$PROJECT_DIR$/python3-grammar/python3-grammar.iml" filepath="$PROJECT_DIR$/python3-grammar/python3-grammar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scrapy-demo/scrapy-demo.iml" filepath="$PROJECT_DIR$/scrapy-demo/scrapy-demo.iml" />
     </modules>
   </component>
 </project>
