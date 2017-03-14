@@ -6,7 +6,11 @@ from datetime import datetime
 
 # pip install pymongo
 def insert():
-    client = MongoClient("192.168.10.128:10000")
+    #client = MongoClient("192.168.10.128:10000")
+    client = MongoClient(host="127.0.0.1", port=27017)
+    # 权限认证
+    db_auth = client.admin
+    db_auth.authenticate("system_admin", "123456")
     db = client.test
     doc = {"address": {
         "street": "2 Avenue",
@@ -25,7 +29,7 @@ def insert():
             "score": 17
         }
     ], "name": "Vella", "restaurant_id": "41704620", '_id': ObjectId().__str__()}
-    result = db.restaurants.insert_one(doc)
+    result = db.tt.insert_one(doc)
     client.close()
     print result
 

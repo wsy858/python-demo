@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for doubantest project
+# Scrapy settings for daomubiji project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,28 +9,28 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'doubantest'
+BOT_NAME = 'daomubiji'
 
-SPIDER_MODULES = ['doubantest.spiders']
-NEWSPIDER_MODULE = 'doubantest.spiders'
+SPIDER_MODULES = ['daomubiji.spiders']
+NEWSPIDER_MODULE = 'daomubiji.spiders'
 
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 COOKIES_ENABLED = True
 
-# FEED_URI = u'file:///E:/idea_workspace/python-demo/scrapy-demo/t.csv'
-# FEED_FORMAT = 'CSV'
-
-ITEM_PIPELINES = {'doubantest.pipelines.DoubantestPipeline': 300,}
+ITEM_PIPELINES = {
+   'daomubiji.pipelines.DaomubijiPipeline': 300,
+}
 
 MONGODB_HOST = '192.168.10.121'
 MONGODB_PORT = 20000
 MONGODB_DBNAME = 'spider'
 
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'doubantest (+http://www.yourdomain.com)'
+#USER_AGENT = 'daomubiji (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-# ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -58,13 +58,13 @@ MONGODB_DBNAME = 'spider'
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'doubantest.middlewares.DoubantestSpiderMiddleware': 543,
+#    'daomubiji.middlewares.DaomubijiSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'doubantest.middlewares.MyCustomDownloaderMiddleware': 543,
+#    'daomubiji.middlewares.MyCustomDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -76,7 +76,7 @@ MONGODB_DBNAME = 'spider'
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'doubantest.pipelines.DoubantestPipeline': 300,
+#    'daomubiji.pipelines.DaomubijiPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)

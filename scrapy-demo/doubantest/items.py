@@ -5,10 +5,12 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
 
-class DoubantestItem(scrapy.Item):
+class DoubantestItem(Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    title = Field()  # 标题
+    info = Field()  # 描述
+    star = Field()  # 评分
+    quote = Field()  # 名句
