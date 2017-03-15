@@ -14,7 +14,7 @@ BOT_NAME = 'daomubiji'
 SPIDER_MODULES = ['daomubiji.spiders']
 NEWSPIDER_MODULE = 'daomubiji.spiders'
 
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
+USER_AGENT = 'Mozilla/6.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 COOKIES_ENABLED = True
 
 ITEM_PIPELINES = {
@@ -25,6 +25,8 @@ MONGODB_HOST = '192.168.10.121'
 MONGODB_PORT = 20000
 MONGODB_DBNAME = 'spider'
 
+# LOG_FILE = 'spider.log'
+# LOG_LEVEL = 'INFO'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'daomubiji (+http://www.yourdomain.com)'

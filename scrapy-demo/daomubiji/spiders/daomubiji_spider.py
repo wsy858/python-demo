@@ -1,6 +1,6 @@
 # _*_ coding:UTF-8 _*_
 import scrapy
-
+import time
 from daomubiji.items import DaomubijiItem
 
 '''
@@ -19,8 +19,7 @@ class DaomubijiSpider(scrapy.Spider):
     # 被调用时，每个初始URL完成下载后生成的 Response 对象将会作为唯一的参数传递给该函数。
     # 该方法负责解析返回的数据(response data)，提取数据(生成item)以及生成需要进一步处理的URL的 Request 对象。
     def parse(self, response):
-        # print response.body
-        # item = DaomubijiItem()
+
         for href in response.css(".article-content  a::attr(href)").extract():
             yield scrapy.Request(response.urljoin(href), callback=self.parse_book)
 
@@ -29,9 +28,11 @@ class DaomubijiSpider(scrapy.Spider):
             book_info = article_content.css('p.homedes::text').extract_first()
             self.book_info_dict[book_name] = book_info
 
-    # 处理主页每本书链接
+    # 处理每本书章节链接
     def parse_book(self, response):
         for href in response.css("div.excerpts .excerpt-c3 a::attr(href)").extract():
+            # 休眠1s继续
+            time.sleep(1)
             yield scrapy.Request(response.urljoin(href), callback=self.parse_chapter)
 
     # 处理每章节内容

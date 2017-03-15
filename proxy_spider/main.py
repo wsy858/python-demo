@@ -8,5 +8,8 @@ from scrapy import cmdline
 
 # cmdline.execute("scrapy crawl quotes -o r.json".split())
 
-# douban 指douban_spider.py文件中DoubanSpider类的name属性值
-cmdline.execute("scrapy crawl douban".split())
+cmdline.execute("scrapy crawl Proxy".split())
+
+# 参考来源
+# http://blog.csdn.net/mingz_free/article/details/45967725
+

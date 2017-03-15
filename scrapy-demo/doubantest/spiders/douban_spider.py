@@ -2,6 +2,7 @@
 import scrapy
 
 from doubantest.items import DoubantestItem
+import time
 
 '''
 豆瓣电影TOP250爬虫示例
@@ -41,4 +42,6 @@ class DoubanSpider(scrapy.Spider):
         next_page = response.css('.paginator .next a::attr(href)').extract_first()
         if next_page is not None:
             next_page = response.urljoin(next_page)
+            # 休眠5s后继续
+            time.sleep(5)
             yield scrapy.Request(next_page, callback=self.parse)
