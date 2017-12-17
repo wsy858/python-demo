@@ -150,6 +150,7 @@ def delete():
     finally:
         MySqlUtil.close_connection(db)
 
+
 # 测试方法
 if __name__ == "__main__":
     show_database_version()
