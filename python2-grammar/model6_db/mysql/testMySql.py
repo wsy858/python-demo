@@ -34,6 +34,10 @@ def show_database_version():
     cursor.execute("select version()")
     data = cursor.fetchone()
     print "Database version : %s " % data
+    cursor.execute("show databases")
+    data = cursor.fetchall()
+    for i in data:
+        print i[0]
     MySqlUtil.close_connection(db)
 
 
@@ -42,8 +46,7 @@ def create_table():
     try:
         db = MySqlUtil.get_connection()
         cursor = db.cursor()
-        cursor.execute("DROP TABLE IF EXISTS EMPLOYEE")
-        sql = """CREATE TABLE EMPLOYEE (
+        sql = """CREATE TABLE IF NOT EXISTS EMPLOYEE (
               ID INTEGER AUTO_INCREMENT PRIMARY KEY,
               FIRST_NAME  CHAR(20) NOT NULL,
               LAST_NAME  CHAR(20),
@@ -65,7 +68,14 @@ def insert():
         cursor = db.cursor()
         sql = """INSERT INTO EMPLOYEE(FIRST_NAME,
               LAST_NAME, AGE, SEX, INCOME)
-              VALUES ('Mac', 'Mohan', 20, 'M', 2000)"""
+              VALUES """
+        i = 1
+        while i <= 100:
+            sql = sql + "('Mac"+str(i)+"', 'Moran"+str(i)+"', 20, 'M', 2000)"
+            if i != 100:
+                sql += ','
+            i = i+1
+        print(sql)
         cursor.execute(sql)
         db.commit()
     except Exception as e:
@@ -154,9 +164,9 @@ def delete():
 # 测试方法
 if __name__ == "__main__":
     show_database_version()
-    create_table()
+    # create_table()
     insert()
-    query_one()
-    query_all()
-    update()
-    delete()
+    # query_one()
+    # query_all()
+    # update()
+    # delete()

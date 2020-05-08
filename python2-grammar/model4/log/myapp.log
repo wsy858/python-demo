@@ -52,3 +52,9 @@ Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:37] INFO info-------------
 root        : INFO     info-------------
 Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:38] DEBUG debug-----------
 Fri, 23 Dec 2016 15:01:42 TestLogging.py[line:39] DEBUG debug-----------{'name': 'wang'}
+Wed, 06 Jun 2018 20:56:22 TestLogging.py[line:36] WARNING ware-------------
+root        : WARNING  ware-------------
+Wed, 06 Jun 2018 20:56:22 TestLogging.py[line:37] INFO info-------------
+root        : INFO     info-------------
+Wed, 06 Jun 2018 20:56:22 TestLogging.py[line:38] DEBUG debug-----------
+Wed, 06 Jun 2018 20:56:22 TestLogging.py[line:39] DEBUG debug-----------{'name': 'wang'}

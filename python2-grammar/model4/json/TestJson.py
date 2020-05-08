@@ -18,9 +18,9 @@ def encode_json():
     obj = ["foo", {"bar": ["baz", None, 1.0, 2]}]
     print type(obj)
     print obj
-    str = json.dumps(obj)
-    print type(str)
-    print str
+    string_json = json.dumps(obj)
+    print type(string_json)
+    print string_json
 
 
 if __name__ == "__main__":

@@ -56,3 +56,7 @@ for key in d:
 # 直接遍历出key和value
 for k, v in d.iteritems():
     print k, ' : ', v
+
+if __name__ == '__main__':
+    pass
+

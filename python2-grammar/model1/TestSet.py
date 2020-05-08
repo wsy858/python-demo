@@ -29,3 +29,5 @@ print 6 in s
 # 3、遍历set
 for name in s:
     print name
+
+print list(s)
